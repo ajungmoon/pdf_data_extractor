@@ -9,6 +9,8 @@ outdir = './PDF_to_TXT'
 # Use ls > file_locations.txt in commandline if importing all files from a specific folder
 
 # OR alternatively, in commandline of the folder with PDFs, do ==> for i in *.pdf; do pdftotext "$i"; done
+# GREP function to optiomise ==> grep -B2 -Pzo "(?s)Statistics.*Value.*Mean.*Standard Deviation.*?Standard Error.*?[0-9]\.[0-9]"  ECSE\ 200\ \ Electric\ Circuits\ 1\ -\ Lecture\ \(Section\ 001\ \ CRN\ 2275\)\ -\ Marwan\ Kanaan\ \(Fall\ 2023\)_d68f6d1b-82a6-42bb-8573-c2ca67805e14en-US.txt 
+
 
 with open('file_locations.txt', 'r') as f:
     for count, line in enumerate(f, start=1):
