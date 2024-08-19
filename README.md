@@ -10,3 +10,6 @@ Then, in the folder containing the converted .txt files, run each of the followi
 # for i in *.txt; do printf "%s%s" $i; printf "\n"; grep -A 12 "Value" "$i" | grep -A 2 "Standard Error" | grep -E '[0-9\.]*' -o; done >> SE.txt
 # for i in *.txt; do printf "%s%s" $i; printf "\n"; grep -A 12 "Value" "$i" | grep -A 2 "Standard Deviation" | grep -E '[0-9\.]*' -o; done >> SD.txt
 
+For extracting department mean and standard deviations,
+# for i in *.txt; do printf "%s%s" $i; printf "\n"; grep -A 8 "Mean,Department Mean" "$i" | grep -A 2 "SD,Dept Course Mean (DCM)" | grep -E '[0-9\.]*' -o; done >> DeptMean.txt
+# for i in *.txt; do printf "%s%s" $i; printf "\n"; grep -A 8 "Mean,Department Mean" "$i" | grep -A 4 "SD,Dept Course Mean (DCM)" | grep -E '[0-9\.]*' -o; done >> DeptSD.txt
